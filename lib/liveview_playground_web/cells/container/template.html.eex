@@ -1,0 +1,10 @@
+<%= container(class: [
+                assigns[:class],
+                variant_classes(assigns[:variant])
+              ],
+              test_selector: assigns[:test_selector],
+              test_value: assigns[:test_value]) do %>
+  <%= if assigns[:children] do %>
+    <%= @children %>
+  <% end %>
+<% end %>

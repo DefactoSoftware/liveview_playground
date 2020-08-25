@@ -1,0 +1,37 @@
+.ContainerCell {
+  position: relative;
+
+  @media (--tablet) {
+    padding-left: var(--spacing-horizontal);
+    padding-right: var(--spacing-horizontal);
+  }
+}
+
+.variant-dont_flex,
+.variant-default {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--media-desktop);
+
+  @media (--desktop-large) {
+    max-width: var(--media-desktop-large);
+  }
+
+  :global(.variant-backoffice) & {
+    max-width: none;
+  }
+}
+
+.variant-fullwidth {
+  max-width: none;
+}
+
+.variant-fullscreen {
+  padding: 0;
+}
+
+.variant-narrow {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+}
